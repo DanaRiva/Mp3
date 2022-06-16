@@ -36,6 +36,8 @@ class ReproductorMusica(QMainWindow):
         self.player.positionChanged.connect(self.posicion_cancion)#identificar posicion
         self.player.durationChanged.connect(self.duracion_cancion)#identificar duracion
         self.player.stateChanged.connect(self.estado_tiempo)#en que tiempo se encuentra la cancion
+        #boton cerrar
+        self.bt_cerrar.clicked.connect(lambda: self.close())
         #control de la musica
         self.bt_play.clicked.connect(self.reproducir_musica)#ejecicion de metodos
         self.bt_pausa.clicked.connect(self.pausar_musica)#ejecicion de metodos
